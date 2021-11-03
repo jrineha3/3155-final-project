@@ -1,0 +1,29 @@
+2. Include the name of all of your team members in the document to be submitted (2 points)
+	John Hunt, Jonathan Painter, James Rinehart, Eden Woland 
+
+3. List the source of and describe at least 4 potential data sets (8 points)
+	Eden Potential Data Sets: 
+		○ https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates/ghe-leading-causes-of-death
+			§ Describe: The top 10 causes of death in the US for both sexes and all ages 2019, 2015, 2010
+			§ Customer: Humans in the US looking to see the common causes of death, hopefully with the goal to improve their health
+			§ Problem and Product Vision: People are often scared of things like airplanes for they come across unsafe, when in reality heart health causes more death than airplanes by a long shot. If people are able to easily see the most common causes of death maybe they can improve their health and anxiety. 
+			§ Major Features: View information in different views, such as graph vs. chart. Possibly see what they are at most risk for once they filter the information by their data like "woman, BMI, age"
+		
+		○ https://www.who.int/data/gho/data/themes/mental-health/suicide-rates
+			§ Describe: Suicide Rates per 100,000 people separated by Country, and year 
+			§ Customer: Schools, people, medical student looking to see the Suicide trend each year
+			§ Problem and Product Vision: Suicide is often linked to mental health, which schools and companies have been taking more of a interest in, sometimes even allowing free therapy visits. If they can see the rates per city, maybe they can see where more work needs to be done. 
+			§ Major Features: Click and look on each city, filter by employment status and gender, age. 
+			
+			
+		○  https://catalog.data.gov/dataset/national-student-loan-data-system
+			§ Describe: Student Debt by School Code
+			§ Customer: Students and Parents looking to see the trend of student debt 
+			§ Problem and Product Vision: Student debt is so bad that removing student debt is often a political move, if parents or students can look at different graphs and see a trend, maybe they can help eliminate some debt 
+			§ Major Features: Click and look on each city in map view, filter by student employment status and gender, age. Maybe even by degree. 
+			 
+		○ https://data.census.gov/cedsci/profile?g=0100000US
+			§ Describe: Population With and Without an Internet Subscription 
+			§ Customer: CS Student, or anyone else like a Network company, looking to see where the internet is lacking 
+			§ Problem and Product Vision : The internet is commonly deemed as a necessity now, knowing where it is lacking is essential to ensure all are given equal opportunity to what the internet has to offer including free education 
+      § Major Features: Click and look on each city in map view, filter by household employment status and size of family 
