@@ -2,3 +2,5 @@ James Rinehart,
 Eden Woland,
 Jonathon Painter,
 John Hunt
+
+Team ideas all submitted separately to github repo and named by last name
