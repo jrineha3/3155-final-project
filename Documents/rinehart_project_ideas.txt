@@ -1,0 +1,18 @@
+1. Air Quality Survey data from the EPA at https://aqs.epa.gov/aqsweb/airdata/download_files.html
+
+2. Customers would be anyone with a phone or computer who wants to check air quality such as people looking for new homes or people with
+   respiratory ilnesses.
+
+3. The proposed project could be useful in providing emergency air quality alerts to users with respiratory illness and could also be used to provide
+   statistical analysis of historical air quality data to provide users with an idea air quality trends and history for a particular area.
+
+4. The product would breathe-ez. The product would provide real time air quality data in an easy to digest manner to give users a better idea
+   of what's in the air they're breathing. With air quality alerts for ill users we could potentially save lots of pain and discomfort. we could also help
+   users find potentially safer areas to live if they do have repiratory problems.
+
+5. Features
+	1. Air quality emergency alerts.
+	2. Air quality historical data represented with graphs and line plots.
+	3. Air quality trend data based patterns of air quality data.
+	4. live air quality heat map.
+	5. average air quality heat map.
