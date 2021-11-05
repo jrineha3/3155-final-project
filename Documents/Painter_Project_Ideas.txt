@@ -1,0 +1,7 @@
+﻿    1. Source:  https://catalog.data.gov/dataset/national-student-loan-data-system
+
+    • Describe: Student Debt by School Code 
+    2. Customer: Students and Parents looking to see the trend of student debt 
+    3. Problem: Student debt can be so bad in specific low-income school codes  
+    4. Product Vision: If parents or students can look at different graphs and data analytics they may be able to see a trend, and maybe that would help them know how to eliminate some debt. 
+    5. Major Features: Click and look on each city in map view, you can filter by student employment status, gender, or age. Maybe sort by degrees in different school codes. 
