@@ -37,7 +37,15 @@
             <img id="banner" src="images/cloud_banner.jpg" alt="Banner image of blue sky and clouds">
         </div>
         <div id="index_main" class="flex-container bg-primary">
-
+            <form id="query_form" action="query_data" method="post">
+                <h2 class="ml-2">Input Lat & Long</h2>
+                <input type="text" name="latitude.json" id="lat" placeholder="Latitude" class="flex ml-3">
+                <input type="text" name="longitude.json" id="long" placeholder="Longitude" class="flex ml-3">
+                <h2 class="ml-2 mt-2">Input City Name</h2>
+                <input type="text" name="City.json" id="city" placeholder="City Name" class="flex ml-3">
+                <h2 class="ml-2 mt-2">Input Zip Code</h2>
+                <input type="text" name="zip.json" id="zip" placeholder="Postal Code" class="flex ml-3 mb-3">
+            </form>
         </div>
     </main>
     </body>
