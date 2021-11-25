@@ -1,12 +1,34 @@
 $(document).ready(function() {
-    alert("ready");//alert to show that document is ready
-    let $submit = $('button');//creates jquery object containing all buttons
     
+    let $submit = $('button');//creates jquery object containing all buttons
 
-    $submit.each(function() {//runs function for each button
-        $(this).on('click', function(evt) {//adds event listener for mouse click event
-            evt.preventDefault();//prevents default action of submit button which submits the form
-            alert("click");//alert to show that a submit button has been clicked
+    $submit.each(function() {
+        $(this).on('click', function(evt) {
+            evt.preventDefault();
         });
+    });
+    
+    $("#query_submit_1").on('click', function(evt) {
+        evt.preventDefault();
+        let lat = $("#lat").val();
+        lat = lat.replace(/\s/g,'');
+        let long = $("#long").val();
+        long = long.replace(/\s/g,'');
+
+        if (isNaN(lat) ||isNaN(long)) {
+            alert("Please enter number values for lat and long!");
+            $("#lat").val("");
+            $("#long").val("");
+        }
+    });
+    $("#query_submit_3").on('click', function(evt) {
+        evt.preventDefault();
+        let zip = $("#zip").val();
+        zip = zip.replace(/\s/g,'');
+
+        if (isNaN(zip)) {
+            alert("Please enter a number value for zip code!");
+            $("#zip").val("");
+        }
     });
 });
