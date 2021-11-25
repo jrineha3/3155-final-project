@@ -1,3 +1,12 @@
 #banner {
     width: 100%;
 }
+body {
+    background: url('images/background_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-backgrground-size: cover;
+}
+#index_main {
+    width: 60%;
+}

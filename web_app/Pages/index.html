@@ -18,12 +18,12 @@
         <div id="page_head" class="flex-container pt-4 d-flex justify-content-center bg-primary text-white">
             <h3>Breathe-EZ</h3>
         </div>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-to-top">
             <div class="container-fluid">
               <!-- Links -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link navbar-brand" href="index.html">Breathe-EZ</a>
+                <ul class="nav navbar-nav">
+                    <li class="navbar-header">
+                        <a class="navbar-brand" href="index.html">Breathe-EZ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="heat.html">AQS Heat Map by State</a>
@@ -31,37 +31,40 @@
                     <li class="nav-item">
                         <a class="nav-link" href="stats.html">AQS Data Graphs</a>
                     </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link flex" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <div id="banner_container" class="flex-container">
-            <img id="banner" src="images/cloud_banner.jpg" alt="Banner image of blue sky and clouds">
-        </div>
-        <div id="index_main" class="flex-container bg-primary">
-            <!--form action is # which adds # to url. if default action is properly prevented # will not be added-->
-            <form id="query_form_1" action="#" method="post">
-                <h2 class="ml-2">Input Lat & Long</h2>
-                <input type="text" name="latitude.json" id="lat" placeholder="Latitude" class="flex ml-3">
-                <input type="text" name="longitude.json" id="long" placeholder="Longitude" class="flex ml-3">
-                <!--affected buttons where jquery is not properly running-->
-                <button type="submit" id="query_submit_1" class="btn btn-dark submit_btn">Submit</button>
+        <div id="index_main" class="card mx-auto form-group mt-5 pt-1 bg-primary">
+            <form id="query_form_1" class='form-row mx-3 my-2' action="#" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="latitude" class="form-label">latitude</label>
+                        <input type="text" class="flex form-control" name="latitude" id="lat" placeholder="Latitude">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="longitude" class="form-label">longitude</label>
+                        <input type="text" class="flex form-control" name="longitude" id="long" placeholder="Longitude">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label class="form-label">&nbsp</label>
+                        <button type="submit" id="query_submit_1" class="btn btn-dark submit_btn form-control">Submit</button>
+                    </div>
+                </div>
             </form>
-            <!--form action is # which adds # to url. if default action is properly prevented # will not be added-->
-            <form id="query_form_2" action="#" method="post">
+            <form id="query_form_2" class='form-row' action="#" method="post">
                 <h2 class="ml-2 mt-2">Input City Name</h2>
-                <input type="text" name="City.json" id="city" placeholder="City Name" class="flex ml-3">
-                <!--affected buttons where jquery is not properly running-->
+                <input type="text" id="city" placeholder="City Name" class="flex ml-3">
                 <button type="submit" id="query_submit_2" class="btn btn-dark submit_btn">Submit</button>
             </form>
-            <!--form action is # which adds # to url. if default action is properly prevented # will not be added-->
-            <form id="query_form_3" action="#" method="post">
+            <form id="query_form_3" class='form' action="#" method="post">
                 <h2 class="ml-2 mt-2">Input Zip Code</h2>
-                <input type="text" name="zip.json" id="zip" placeholder="Postal Code" class="flex ml-3 mb-3">
-                <!--affected buttons where jquery is not properly running-->
+                <input type="text" id="zip" placeholder="Postal Code" class="flex ml-3 mb-3">
                 <button type="submit" id="query_submit_3" class="btn btn-dark submit_btn">Submit</button>
             </form>
         </div>
