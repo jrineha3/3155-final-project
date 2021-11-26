@@ -41,31 +41,45 @@
         </nav>
 
         <div id="index_main" class="card mx-auto form-group mt-5 pt-1 bg-primary">
-            <form id="query_form_1" class='form-row mx-3 my-2' action="#" method="post">
+            <form id="query_form_1" class='mx-3 my-2' action="#" method="post">
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group ml-2 mr-1 col-5">
                         <label for="latitude" class="form-label">latitude</label>
                         <input type="text" class="flex form-control" name="latitude" id="lat" placeholder="Latitude">
                     </div>
-                    <div class="form-group mx-2">
+                    <div class="form-group mx-1 col-5">
                         <label for="longitude" class="form-label">longitude</label>
                         <input type="text" class="flex form-control" name="longitude" id="long" placeholder="Longitude">
                     </div>
-                    <div class="form-group mx-2">
+                    <div class="form-group mx-1">
                         <label class="form-label">&nbsp</label>
                         <button type="submit" id="query_submit_1" class="btn btn-dark submit_btn form-control">Submit</button>
                     </div>
                 </div>
             </form>
-            <form id="query_form_2" class='form-row' action="#" method="post">
-                <h2 class="ml-2 mt-2">Input City Name</h2>
-                <input type="text" id="city" placeholder="City Name" class="flex ml-3">
-                <button type="submit" id="query_submit_2" class="btn btn-dark submit_btn">Submit</button>
+            <form id="query_form_2" class='mx-3 my-2' action="#" method="post">
+                <div class="form-row">
+                    <div class="form-group mx-2 col-7">
+                        <label for="city" class="form-label">City Name</label>
+                        <input type="text" name ="city" id="city" placeholder="City Name" class="flex form-control">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label class="form-label">&nbsp</label>
+                        <button type="submit" id="query_submit_2" class="btn btn-dark submit_btn form-control">Submit</button>
+                    </div>
+                </div>
             </form>
-            <form id="query_form_3" class='form' action="#" method="post">
-                <h2 class="ml-2 mt-2">Input Zip Code</h2>
-                <input type="text" id="zip" placeholder="Postal Code" class="flex ml-3 mb-3">
-                <button type="submit" id="query_submit_3" class="btn btn-dark submit_btn">Submit</button>
+            <form id="query_form_3" class='mx-3 my-2' action="#" method="post">
+                <div class="form-row">
+                    <div class="form-group mx-2 col-7">
+                        <label for="Zip Code" class="form-label">Zip Code</label>
+                        <input type="text" name="Zip Code" id="zip" placeholder="Zip Code" class="flex form-control">
+                    </div>
+                    <div class="form-group mx-2">
+                        <label class="form-label">&nbsp</label>
+                        <button type="submit" id="query_submit_3" class="btn btn-dark submit_btn form-control">Submit</button>
+                    </div>
+                </div>
             </form>
         </div>
     </main>
