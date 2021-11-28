@@ -1,10 +1,25 @@
 $(document).ready(function() {
     
-    let $submit = $('button');//creates jquery object containing all buttons
+    let $navLink = $('.nav-link');//creates jquery object containing all buttons
 
-    $submit.each(function() {
+    $navLink.each(function() {
         $(this).on('click', function(evt) {
-            evt.preventDefault()
+            evt.preventDefault();
+            //let page = this.attr('href');
+            $.ajax({
+				type: "get",
+				url: "stats.json",
+				dataType: "json",
+				success: function (data) {
+					let $main = $("index_main");
+					$main.html("");
+
+					$main.html(data.stats);
+				},
+				error:   function (xhr, status, err) {
+					alert('something went wrong' + xhr.status + err);
+				}
+			});
         });
     });
     
