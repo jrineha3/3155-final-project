@@ -11,10 +11,10 @@ $(document).ready(function() {
 
             $.ajax({
 				type: "GET",
-				url: "./stats.json",
+				url: "./nav.json",
 				dataType: "json",
 				success: function (data) {
-                    let html = data.item;
+                    let html = data.stats;
                     $main.html("");
 					$main.html(html);
 				},
@@ -33,17 +33,15 @@ $(document).ready(function() {
         lat = lat.replace(/\s/g,'');
         let long = $long.val();
         long = long.replace(/\s/g,'');
-
-        if (isNaN(lat) || isNaN(long)) {
+        if (lat.length == '' || long.length == '') {
+            alert("Please enter a value for both latitude and longitude!");
+        }
+        else if (isNaN(lat) || isNaN(long)) {
             alert("Please enter number values for lat and long!");
             $lat.val("");
             $long.val("");
         }
         else if (!isNaN(lat) && !isNaN(long)) {
-            if (lat.length === '' || long.length === '') {
-                alert("Please enter a value for both latitude and longitude!");
-            }
-            
             $lat.val(lat);
             $long.val(long);
             $('#query_form_1').submit();
@@ -58,7 +56,10 @@ $(document).ready(function() {
         let city = $city.val();
         city.replace(/\s/g,'');
 
-        if (!isNaN(city)) {
+        if (city.length == '') {
+            alert("please enter a value");
+        }
+        else if (!isNaN(city)) {
             alert("City names do not include numbers!");
         }
         else {
@@ -69,7 +70,7 @@ $(document).ready(function() {
 
     $('#query_submit_3').on('click', function(evt) {
         evt.preventDefault();
-        let $zip = $('zip');
+        let $zip = $('#zip');
         let zip = $zip.val();
         zip = zip.replace(/\s/g,'');
 
@@ -78,7 +79,7 @@ $(document).ready(function() {
             $('#zip').val("");
         }
         else if (!isNaN(zip)) {
-            if (zip.length === '') {
+            if (zip.length == '') {
                 alert("Please enter a value!");
             }
             else if (zip.length < 5 || zip.length > 5) {
