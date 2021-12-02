@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Datasets">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_aqi_by_county_2019.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_conc_by_monitor_2020.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_conc_by_monitor_2021.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_aqi_by_county_2020.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_conc_by_monitor_2019.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_aqi_by_county_2021.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_aqi_by_cbsa_2020.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_aqi_by_cbsa_2021.zip!/" />
+      <root url="jar://$PROJECT_DIR$/web_app/Datasets/annual_aqi_by_cbsa_2019.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
