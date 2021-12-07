@@ -5,17 +5,17 @@ $(document).ready(function() {
     $navLink.each(function() {
         $(this).on('click', function(evt) {
             evt.preventDefault();
+            let href = $(this).attr('href');
 
             let $main = $("#index_main");
-            //let page = this.attr('href');
 
             $.ajax({
-				type: "GET",
-				url: "./nav.json",
-				dataType: "json",
+				type: 'GET',
+				url: './nav.json',
+				dataType: 'json',
 				success: function (data) {
-                    let html = data.stats;
-                    $main.html("");
+                    let html = data[href];
+                    $main.html('');
 					$main.html(html);
 				},
 				error:   function (xhr, status, err) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
         });
     });
     
-    $('#query_submit_1').on('click', function(evt) {
+    $('#coordinate_submit').on('click', function(evt) {
         evt.preventDefault();
         let $lat = $('#lat');
         let $long = $('#long');
@@ -33,62 +33,59 @@ $(document).ready(function() {
         lat = lat.replace(/\s/g,'');
         let long = $long.val();
         long = long.replace(/\s/g,'');
+        lat = parseFloat(lat);
+        long = parseFloat(long);
+
         if (lat.length == '' || long.length == '') {
-            alert("Please enter a value for both latitude and longitude!");
+            alert('Please enter a value for both latitude and longitude!');
         }
         else if (isNaN(lat) || isNaN(long)) {
-            alert("Please enter number values for lat and long!");
-            $lat.val("");
-            $long.val("");
+            alert('Please enter number values for lat and long!');
+            $lat.val('');
+            $long.val('');
         }
         else if (!isNaN(lat) && !isNaN(long)) {
             $lat.val(lat);
             $long.val(long);
-            $('#query_form_1').submit();
+            $('#coordinate_form').submit();
         }
 
 
     });
 
-    $('#query_submit_2').on('click', function(evt) {
+    $('#state_submit').on('click', function(evt) {
         evt.preventDefault();
-        let $city = $('#city');
-        let city = $city.val();
-        city.replace(/\s/g,'');
+        let $state = $('#state');
+        let state = $state.val();
+        state.replace(/\s/g,'');
 
-        if (city.length == '') {
-            alert("please enter a value");
+        if (state.length == '') {
+            alert('please enter a value');
         }
-        else if (!isNaN(city)) {
-            alert("City names do not include numbers!");
+        else if (!isNaN(state)) {
+            alert('State names do not include numbers!');
         }
         else {
-            $city.val(city);
-            $('#query_form_3').submit();
+            $state.val(state);
+            $('#state_form').submit();
         }
     });
 
-    $('#query_submit_3').on('click', function(evt) {
+    $('#county_submit').on('click', function(evt) {
         evt.preventDefault();
-        let $zip = $('#zip');
-        let zip = $zip.val();
-        zip = zip.replace(/\s/g,'');
+        let $county = $('#county');
+        let county = $county.val();
+        county = county.replace(/\s/g,'');
 
-        if (isNaN(zip)) {
-            alert("Please enter a number value for zip code!");
-            $('#zip').val("");
+        if (county.length == '') {
+            alert('Please enter a value!');
         }
-        else if (!isNaN(zip)) {
-            if (zip.length == '') {
-                alert("Please enter a value!");
-            }
-            else if (zip.length < 5 || zip.length > 5) {
-                alert("ZIP code should be 5 digits!");
-            }
-            else {
-                $zip.val(zip);
-                $('#query_form_3').submit();
-            }
+        else if (!isNaN(county)) {
+            alert('county name shouldn\'t contain numbers');
+        }
+        else {
+            $county.val(county);
+            $('#county_form').submit();
         }
     });
 });
