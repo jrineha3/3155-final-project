@@ -41,6 +41,7 @@ $(document).ready(function() {
         }
         else if (!isNaN(state)) {
             alert('State names do not include numbers!');
+            $state.val('');
         }
         else {
             $state.val(state);
@@ -59,6 +60,7 @@ $(document).ready(function() {
         }
         else if (!isNaN(county)) {
             alert('county name shouldn\'t contain numbers');
+            $county.val('');
         }
         else {
             $county.val(county);
@@ -77,6 +79,7 @@ $(document).ready(function() {
         }
         else if (isNaN(aqi)) {
             alert('AQI value should be numeric!');
+            $aqi.val('');
         }
         else {
             $aqi.val(aqi);

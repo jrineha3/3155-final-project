@@ -8,7 +8,7 @@ import glob
 # plot geographical plots
 
 
-df = pd.read_csv('web_app/Datasets/County/annual_aqi_by_county_2019.csv')
+df = pd.read_csv('./annual_aqi_by_county_2019.csv')
 
 
 data = dict(type='choropleth',
@@ -28,17 +28,16 @@ data = dict(type='choropleth',
             reversescale=False,
 
             # text can be given anything you like
-            text=['text 1', 'text 2', 'text 3'],
             z=df['Median AQI'],
-            colorbar={'title': 'AQI Levels'})
+            colorbar={'title': 'Median AQI Levels'})
 
 layout = dict(geo={'scope': 'usa'})
 
 # passing data dictionary as a list
 choromap = go.Figure(data=[data], layout=layout)
-choromap.show()
+#choromap.show()
 
 
 
 # Plot the figure and saving in a html file
-#pyo.plot(choromap, filename='choromap.html', auto_open=False)
+pyo.plot(choromap, filename='choromap.html', auto_open=False)
