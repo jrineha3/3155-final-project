@@ -1,9 +1,21 @@
 import pandas as pd
 import plotly.offline as pyo
 import plotly.graph_objs as go
+import os
+import glob
 
 # type defined is choropleth to
 # plot geographical plots
+
+os.chdir("web_app/Datasets/County")
+extensionCounty = 'csv'
+all_filenames_County = [i for i in glob.glob('*.{}'.format(extensionCounty))]
+#combine all files in the list
+combined_csv_County = pd.concat([pd.read_csv(f) for f in all_filenames_County ])
+#export to csv
+combined_csv_County.to_csv( "county.csv", index=False, encoding='utf-8-sig')
+df = pd.read_csv(combined_csv_County)
+
 data = dict(type='choropleth',
 
             # location: Arizoana, California, Newyork
@@ -17,8 +29,8 @@ data = dict(type='choropleth',
 
             # text can be given anything you like
             text=['text 1', 'text 2', 'text 3'],
-            z=[1.0, 2.0, 3.0],
-            colorbar={'title': 'Colorbar Title Goes Here'})
+            z=df['90th Percentile AQI'],
+            colorbar={'title': 'AQI Levels'})
 
 layout = dict(geo={'scope': 'usa'})
 
