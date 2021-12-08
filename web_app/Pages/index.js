@@ -14,13 +14,13 @@ $(document).ready(function() {
 				url: './nav.json',
 				dataType: 'json',
 				success: function (data) {
-                    if (data[href] !== 'choromap') {
+                    if (href !== 'choromap') {
                         let html = data[href];
                         $main.html('');
-					    $main.html(html);
+                        $main.html(html);
                     }
-                    else if (data[href] == 'choromap') {
-                        $main.load('choromap.html')
+                    else if (href == 'choromap') {
+                        $main.load('./choromap.html')
                     }
 				},
 				error:   function (xhr, status, err) {
