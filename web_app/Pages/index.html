@@ -1,84 +1,85 @@
 
     <!doctype html>
-    <html lang="en">
+    <html lang='en'>
     <head>
         <title>Breathe-EZ</title>
-        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="index.css">
+        <link rel='stylesheet' href='bootstrap-5.0.2-dist/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='index.css'>
 
-        <script src="jquery/jquery-3.6.0.min.js"></script>
-        <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-        <script src="index.js"></script>
+        <script src='jquery/jquery-3.6.0.min.js'></script>
+        <script src='bootstrap-4.3.1-dist/js/bootstrap.min.js'></script>
+        <script src='index.js'></script>
 
     
-        <meta charset="UTF-8">
-        <meta name="breathe-ez" content="AQS web app">
+        <meta charset='UTF-8'>
+        <meta name='breathe-ez' content='AQS web app'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
     <main>
-        <div id="page_head" class="flex-container pt-4 d-flex justify-content-center bg-primary text-white">
+        <div id='page_head' class='container-fluid pt-4 d-flex justify-content-center bg-primary text-white'>
             <h3>Breathe-EZ</h3>
         </div>
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-to-top">
-            <div class="container-fluid">
+        <nav class='navbar navbar-expand-lg bg-dark navbar-dark fixed-to-top'>
+            <div class='container-fluid'>
               <!-- Links -->
-                <ul class="nav navbar-nav">
-                    <li class="navbar-header">
-                        <a class="navbar-brand" href="index.html">Breathe-EZ</a>
+                <ul class='nav navbar-nav'>
+                    <li class='navbar-header'>
+                        <a class='nav-link navbar-brand' href='index'>Breathe-EZ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="choromap.html">AQS Heat Map by State</a>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='choromap'>AQS Heat Map by State</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="stats.html">AQS Data Graphs</a>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='stats'>AQS Data Graphs</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='about'>About</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <div id="index_main" class="card mx-auto form-group mt-5 pt-1 bg-primary">
-            <form id="query_form_1" class='mx-3 my-2' action="#" method="post">
-                <div class="form-row">
-                    <div class="form-group ml-2 mr-1 col-5">
-                        <label for="lat" class="form-label">Latitude</label>
-                        <input type="text" class="flex form-control" name="latitude" id="lat" placeholder="Latitude">
+        <div id='index_main' class='card mx-auto form-group mt-5 pt-1 bg-primary'>
+            <form id='coordinate_form' name='coordinate_form' class='mx-3 my-2' action='#' method='post'>
+                <div class='row'>
+                    <div class='form-group mx-2 col-5'>
+                        <label for='lat' class='form-label'>Latitude</label>
+                        <input type='text' class='flex form-control' name='lat' id='lat' placeholder='Latitude'>
                     </div>
-                    <div class="form-group mx-1 col-5">
-                        <label for="long" class="form-label">Longitude</label>
-                        <input type="text" class="flex form-control" name="longitude" id="long" placeholder="Longitude">
+                    <div class='form-group mx-1 col-5'>
+                        <label for='long' class='form-label'>Longitude</label>
+                        <input type='text' class='flex form-control' name='long' id='long' placeholder='Longitude'>
                     </div>
-                    <div class="form-group mx-1">
-                        <label class="form-label">&nbsp</label>
-                        <button type="submit" id="query_submit_1" class="btn btn-dark submit_btn form-control">Submit</button>
+                </div>
+                <div class='form-group mx-2'>
+                    <label class='form-label'>&nbsp</label>
+                    <button type='submit' id='coordinate_submit' class='btn btn-dark form-control'>Submit</button>
+                </div>
+            </form>
+            <form id='state_form' name='state_form' class='mx-3 my-2' action='#' method='post'>
+                <div class='row'>
+                    <div class='form-group mx-2 col-7'>
+                        <label for='state' class='form-label'>State Name</label>
+                        <input type='text' name ='state' id='state' placeholder='State Name' class='flex form-control'>
+                    </div>
+                    <div class='form-group mx-2'>
+                        <label class='form-label'>&nbsp</label>
+                        <button type='submit' id='state_submit' class='btn btn-dark form-control'>Submit</button>
                     </div>
                 </div>
             </form>
-            <form id="query_form_2" class='mx-3 my-2' action="#" method="post">
-                <div class="form-row">
-                    <div class="form-group mx-2 col-7">
-                        <label for="city" class="form-label">City Name</label>
-                        <input type="text" name ="city" id="city" placeholder="City Name" class="flex form-control">
+            <form id='county_form' name='county_form' class='mx-3 my-2' action='#' method='post'>
+                <div class='row'>
+                    <div class='form-group mx-2 col-7'>
+                        <label for='county' class='form-label'>County</label>
+                        <input type='text' name='county' id='county' placeholder='County Name' class='flex form-control'>
                     </div>
-                    <div class="form-group mx-2">
-                        <label class="form-label">&nbsp</label>
-                        <button type="submit" id="query_submit_2" class="btn btn-dark submit_btn form-control">Submit</button>
-                    </div>
-                </div>
-            </form>
-            <form id="query_form_3" class='mx-3 my-2' action="#" method="post">
-                <div class="form-row">
-                    <div class="form-group mx-2 col-7">
-                        <label for="zip" class="form-label">Zip Code</label>
-                        <input type="text" name="Zip Code" id="zip" placeholder="Zip Code" class="flex form-control">
-                    </div>
-                    <div class="form-group mx-2">
-                        <label class="form-label">&nbsp</label>
-                        <button type="submit" id="query_submit_3" class="btn btn-dark submit_btn form-control">Submit</button>
+                    <div class='form-group mx-2'>
+                        <label class='form-label'>&nbsp</label>
+                        <button type='submit' id='county_submit' class='btn btn-dark form-control'>Submit</button>
                     </div>
                 </div>
             </form>
