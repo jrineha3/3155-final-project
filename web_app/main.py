@@ -61,11 +61,12 @@ def barchart(request):
 
 
 @app.route('./index.html', methods=['GET', 'POST'])
-def chlor(request):
+def chloropleth(request):
             df = pd.read_csv(combined_csv_Monitor)
             data = dict(type='choropleth',
             # location: Arizoana, California, Newyork
             locations=['AZ', 'CA', 'NY'],
+
 
             # States of USA
             locationmode='USA-states',
