@@ -39,7 +39,7 @@
             </div>
         </nav>
 
-        <div id='index_main' class='card mx-auto form-group mt-5 pt-1 bg-primary'>
+        <div id='index_main' class='card mx-auto form-group mt-5 py-1 bg-primary'>
             <form id='state_form' name='state_form' class='mx-3 my-2' action='#' method='post'>
                 <div class='row'>
                     <div class='form-group mx-2 col-12'>
@@ -61,6 +61,18 @@
                     <div class='form-group mx-2'>
                         <label class='form-label'>&nbsp</label>
                         <button type='submit' id='county_submit' class='btn btn-dark form-control'>Submit</button>
+                    </div>
+                </div>
+            </form>
+            <form id='aqi_form' name='aqi_form' class='mx-3 my-2' action='#' method='post'>
+                <div class='row'>
+                    <div class='form-group mx-2 col-12'>
+                        <label for='aqi' class='form-label'>Minimum AQI</label>
+                        <input type='text' name='aqi' id='aqi' placeholder='Minimum AQI Value' class='flex form-control'>
+                    </div>
+                    <div class='form-group mx-2'>
+                        <label class='form-label'>&nbsp</label>
+                        <button type='submit' id='aqi_submit' class='btn btn-dark form-control'>Submit</button>
                     </div>
                 </div>
             </form>

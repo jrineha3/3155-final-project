@@ -65,4 +65,22 @@ $(document).ready(function() {
             $('#county_form').submit();
         }
     });
+
+    $('#aqi_submit').on('click', function(evt) {
+        evt.preventDefault();
+        let $aqi = $('#aqi');
+        let aqi = $aqi.val();
+        aqi = aqi.replace(/\s/g,'');
+
+        if (aqi.length == '') {
+            alert('Please enter a value!');
+        }
+        else if (isNaN(aqi)) {
+            alert('AQI value should be numeric!');
+        }
+        else {
+            $aqi.val(aqi);
+            $('#aqi_form').submit();
+        }
+    });
 });
