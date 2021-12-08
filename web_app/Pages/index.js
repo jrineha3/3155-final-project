@@ -14,43 +14,20 @@ $(document).ready(function() {
 				url: './nav.json',
 				dataType: 'json',
 				success: function (data) {
-                    let html = data[href];
-                    $main.html('');
-					$main.html(html);
+                    if (data[href] !== 'choromap') {
+                        let html = data[href];
+                        $main.html('');
+					    $main.html(html);
+                    }
+                    else if (data[href] == 'choromap') {
+                        $main.load('choromap.html')
+                    }
 				},
 				error:   function (xhr, status, err) {
 					alert('something went wrong' + xhr.status + err);
 				}
 			});
         });
-    });
-    
-    $('#coordinate_submit').on('click', function(evt) {
-        evt.preventDefault();
-        let $lat = $('#lat');
-        let $long = $('#long');
-        let lat = $lat.val();
-        lat = lat.replace(/\s/g,'');
-        let long = $long.val();
-        long = long.replace(/\s/g,'');
-        lat = parseFloat(lat);
-        long = parseFloat(long);
-
-        if (lat.length == '' || long.length == '') {
-            alert('Please enter a value for both latitude and longitude!');
-        }
-        else if (isNaN(lat) || isNaN(long)) {
-            alert('Please enter number values for lat and long!');
-            $lat.val('');
-            $long.val('');
-        }
-        else if (!isNaN(lat) && !isNaN(long)) {
-            $lat.val(lat);
-            $long.val(long);
-            $('#coordinate_form').submit();
-        }
-
-
     });
 
     $('#state_submit').on('click', function(evt) {

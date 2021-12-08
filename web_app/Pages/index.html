@@ -28,10 +28,7 @@
                         <a class='nav-link navbar-brand' href='index'>Breathe-EZ</a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='choromap'>AQS Heat Map by State</a>
-                    </li>
-                    <li class='nav-item'>
-                        <a class='nav-link' href='stats'>AQS Data Graphs</a>
+                        <a class='nav-link' href='choromap'>AQI Heat Map</a>
                     </li>
                 </ul>
                 <ul class='nav navbar-nav navbar-right'>
@@ -43,25 +40,9 @@
         </nav>
 
         <div id='index_main' class='card mx-auto form-group mt-5 pt-1 bg-primary'>
-            <form id='coordinate_form' name='coordinate_form' class='mx-3 my-2' action='#' method='post'>
-                <div class='row'>
-                    <div class='form-group mx-2 col-5'>
-                        <label for='lat' class='form-label'>Latitude</label>
-                        <input type='text' class='flex form-control' name='lat' id='lat' placeholder='Latitude'>
-                    </div>
-                    <div class='form-group mx-1 col-5'>
-                        <label for='long' class='form-label'>Longitude</label>
-                        <input type='text' class='flex form-control' name='long' id='long' placeholder='Longitude'>
-                    </div>
-                </div>
-                <div class='form-group mx-2'>
-                    <label class='form-label'>&nbsp</label>
-                    <button type='submit' id='coordinate_submit' class='btn btn-dark form-control'>Submit</button>
-                </div>
-            </form>
             <form id='state_form' name='state_form' class='mx-3 my-2' action='#' method='post'>
                 <div class='row'>
-                    <div class='form-group mx-2 col-7'>
+                    <div class='form-group mx-2 col-12'>
                         <label for='state' class='form-label'>State Name</label>
                         <input type='text' name ='state' id='state' placeholder='State Name' class='flex form-control'>
                     </div>
@@ -73,7 +54,7 @@
             </form>
             <form id='county_form' name='county_form' class='mx-3 my-2' action='#' method='post'>
                 <div class='row'>
-                    <div class='form-group mx-2 col-7'>
+                    <div class='form-group mx-2 col-12'>
                         <label for='county' class='form-label'>County</label>
                         <input type='text' name='county' id='county' placeholder='County Name' class='flex form-control'>
                     </div>
