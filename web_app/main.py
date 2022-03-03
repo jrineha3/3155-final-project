@@ -11,13 +11,6 @@ import plotly.graph_objs as go
 
 app = Flask(__name__)
 
-os.chdir("web_app/Datasets/County")
-extensionCounty = 'csv'
-all_filenames_County = [i for i in glob.glob('*.{}'.format(extensionCounty))]
-#combine all files in the list
-combined_csv_County = pd.concat([pd.read_csv(f) for f in all_filenames_County ])
-#export to csv
-combined_csv_County.to_csv( "county.csv", index=False, encoding='utf-8-sig')
 
 
 #county19 = pd.read_csv('web_app/Datasets/annual_aqi_by_county_2019.csv')
@@ -67,7 +60,7 @@ def barchart(request):
     
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+  app.run()
 
 
 
